@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] =  "Your post was successful"
-      redirect_to index
+      redirect_to posts_path
     else
       flash[:error] = "Your post was unsuccessful"
       render 'new'
