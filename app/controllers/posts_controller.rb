@@ -12,11 +12,12 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:success] "Your post was successful"
+      flash[:success] =  "Your post was successful"
       redirect_to index
     else
-      flash[:error] "Your post was unsuccessful"
+      flash[:error] = "Your post was unsuccessful"
       render 'new'
+    end
   end
 
   private
