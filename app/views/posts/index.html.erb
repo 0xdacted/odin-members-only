@@ -1,8 +1,9 @@
 <div class="container">
   <% @posts.each do |post| %>
     <div class = "post">
-      <%= if user_signed_in? %>
+      <% if user_signed_in? %>
         <p class = "author"><%= post.user.username %></p>
+      <% end %>
       <h1 class="title"><%= post.title %> </h1>
       <p class= "body"><%= post.body%></p>
     </div>
