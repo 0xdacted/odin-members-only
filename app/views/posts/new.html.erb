@@ -1,0 +1,7 @@
+<%= form_with model: @post do |form| %>
+  <%= form.label "Title:"%> 
+  <%= form.text_field :title, placeholder: "insert title here" %>
+  <%= form.label "Body:"%>  
+  <%= form.text_field :body, placeholder: "insert body content here" %>
+  <%= form.submit %>
+<% end %>
